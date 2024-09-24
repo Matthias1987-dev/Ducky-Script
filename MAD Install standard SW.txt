@@ -4,6 +4,20 @@ REM Dependencies: PowerShell
 REM Version: 1.0
 REM title: MAD Install standard SW
 REM TEST N.I.O.
+REM Abfrage ob Winget installiert ist
+REM teamviewer fehlt noch
+REM VM Workstation fehlt noch
+REM WIN32 Disk Imager fehlt noch
+REM Discord fehlt noch
+REM FileZilla fehlt noch
+REM FotoSortierer fehlt noch
+REM Yamaha THR Remote fehlt noch
+REM SD Formatter fehlt noch
+REM Zoom edith fehlt noch
+REM Cura Ultimaker fehlt noch
+REM Repetier-Host fehlt noch
+REM VSCode fehlt noch
+
 GUI r
 DELAY 500
 STRING powershell
