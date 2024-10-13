@@ -3,6 +3,7 @@ REM Description:
 REM Dependencies: PowerShell
 REM Version: 1.0
 REM title: MAD Install standard SW
+REM
 REM TEST N.I.O.
 REM Abfrage ob Winget installiert ist
 REM teamviewer fehlt noch
@@ -16,11 +17,11 @@ REM SD Formatter fehlt noch
 REM Zoom edith fehlt noch
 REM Cura Ultimaker fehlt noch
 REM Repetier-Host fehlt noch
-REM VSCode fehlt noch
 
 REM 20241013:
 REM Office 365 hinzugefügt aber nicht getestet.
 REM Windows SUB System for Linux hinzugefügt aber nicht getestet.
+REM VSCode hinzugefügt aber nicht getestet.
 
 GUI r
 DELAY 500
@@ -243,6 +244,12 @@ ENTER
 STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install --id Microsoft.WSL }
+REM Install Visual Studio Code
+STRING Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install Microsoft.VisualStudioCode }
 ENTER
 CTRL s
 WAIT_FOR_BUTTON_PRESS
