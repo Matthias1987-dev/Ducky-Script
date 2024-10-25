@@ -41,14 +41,17 @@ STRING j
 DELAY 500
 ENTER
 REM Install WinRar
+REM Geändert auf WinRar.
+REM WinRar I.O.
 STRING Write-Host "Moechten Sie die Software WinRar intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install WinRAR.WinRAR }
+STRING if ($response -eq 'J') { winget install WinRAR }
 ENTER
 ENTER
 REM Install VLC
+REM PuTyy I.O.
 STRING Write-Host "Moechten Sie die Software PuTyy intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -57,6 +60,7 @@ STRING if ($response -eq 'J') { winget install PuTTY.PuTTY }
 ENTER
 ENTER
 REM Install Telegram
+REM Telegram I.O.
 STRING Write-Host "Moechten Sie die Software Telegram intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -65,30 +69,37 @@ STRING if ($response -eq 'J') { winget install Telegram.TelegramDesktop }
 ENTER
 ENTER
 REM Install StikyPassword
+REM Geändert auf LamantineSoftware.StickyPassword
+REM StikyPassword I.O.
 STRING Write-Host "Moechten Sie die Software StikyPassword intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install StickyPassword.StickyPassword }
+STRING if ($response -eq 'J') { winget install LamantineSoftware.StickyPassword }
 ENTER
 ENTER
 REM Install Raspberry Pi Imager
+REM Geändert RaspberryPiFoundation.RaspberryPiImager
+REM I.O.
 STRING Write-Host "Moechten Sie die Software Raspberry Pi Imager intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install RaspberryPi.Imager }
+STRING if ($response -eq 'J') { winget install RaspberryPiFoundation.RaspberryPiImager }
 ENTER
 ENTER
 REM Install Notepad++
+REM Geändert auf Notepad++.Notepad++
+REM Notepad++ I.O.
 STRING Write-Host "Moechten Sie die Software Notepad++ intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install NotepadPlusPlus.NotepadPlusPlus }
+STRING if ($response -eq 'J') { winget install Notepad++.Notepad++ }
 ENTER
 ENTER
 REM Install Visual Studio Code
+REM Microsoft.VisualStudioCode I.O.
 STRING Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -97,6 +108,7 @@ STRING if ($response -eq 'J') { winget install Microsoft.VisualStudioCode }
 ENTER
 ENTER
 REM Install RealVNC Viewer
+REM RealVNC.VNCViewer I.O.
 STRING Write-Host "Moechten Sie die Software RealVNC Viewer intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -105,6 +117,7 @@ STRING if ($response -eq 'J') { winget install RealVNC.VNCViewer }
 ENTER
 ENTER
 REM Install QFinder Pro
+REM QNAP.QfinderPro I.O.
 STRING Write-Host "Moechten Sie die Software QFinder Pro intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -113,14 +126,17 @@ STRING if ($response -eq 'J') { winget install QNAP.QfinderPro }
 ENTER
 ENTER
 REM Install Nextcloud
+REM Geändert auf Nextcloud.NextcloudDesktop
+REM Nextcloud I.O.
 STRING Write-Host "Moechten Sie die Software Nextcloud intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Nextcloud.Nextcloud }
+STRING if ($response -eq 'J') { winget install Nextcloud.NextcloudDesktop }
 ENTER
 ENTER
 REM Install TuxGuitar
+REM TuxGuitar I.O.
 STRING Write-Host "Moechten Sie die Software TuxGuitar intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -129,6 +145,7 @@ STRING if ($response -eq 'J') { winget install TuxGuitar.TuxGuitar }
 ENTER
 ENTER
 REM Install Audacity
+REM Audacity I.O.
 STRING Write-Host "Moechten Sie die Software Audacity intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -137,6 +154,7 @@ STRING if ($response -eq 'J') { winget install Audacity.Audacity }
 ENTER
 ENTER
 REM Install balenaEtcher
+REM balena.etcher I.O.
 STRING Write-Host "Moechten Sie die Software balenaEtcher intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -145,6 +163,8 @@ STRING if ($response -eq 'J') { winget install balena.etcher }
 ENTER
 ENTER
 REM Install ProfiCAD
+REM Keine Pakete über WinGet gefunden
+REM ProfiCad N.I.O.
 STRING Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -153,22 +173,27 @@ STRING if ($response -eq 'J') { winget install ProfiCAD.ProfiCAD }
 ENTER
 ENTER
 REM Install Arduino
+REM Geändert auf ArduinoSA.IDE.stable
+REM Arduino I.O.
 STRING Write-Host "Moechten Sie die Software Arduino intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Arduino.Arduino }
+STRING if ($response -eq 'J') { winget install ArduinoSA.IDE.stable }
 ENTER
 ENTER
 REM Install qFlipper
+REM Geändert auf FlipperDevicesInc.qFlipper
+REM qFlipper I.O.
 STRING Write-Host "Moechten Sie die Software qFlipper intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install qFlipper.qFlipper }
+STRING if ($response -eq 'J') { winget install FlipperDevicesInc.qFlipper }
 ENTER
 ENTER
 REM Install FreeCAD
+REM FreeCAD.FreeCAD I.O.
 STRING Write-Host "Moechten Sie die Software FreeCAD intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -177,30 +202,39 @@ STRING if ($response -eq 'J') { winget install FreeCAD.FreeCAD }
 ENTER
 ENTER
 REM Install SweetHome3D
+REM Geändert auf winget install eTeks.SweetHome3D --accept-package-agreements --accept-source-agreements
+REM Probleme mit der Lizenz.
+REM Funktioniert evtl. mit PowerShell als Admin
+REM SweetHome3D N.I.O.
 STRING Write-Host "Moechten Sie die Software SweetHome3D intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install SweetHome3D.SweetHome3D }
+STRING if ($response -eq 'J') { winget install eTeks.SweetHome3D --accept-package-agreements --accept-source-agreements }
 ENTER
 ENTER
 REM Install Jamulus
+REM Geändert auf VolkerFischer.Jamulus
+REM Jamulus I.O.
 STRING Write-Host "Moechten Sie die Software Jamulus intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Jamulus.Jamulus }
+STRING if ($response -eq 'J') { winget install VolkerFischer.Jamulus }
 ENTER
 ENTER
 REM Intall HWinfo
+REM Geändert auf REALiX.HWiNFO
+REM HWinfo I.O.
 STRING Write-Host "Moechten Sie die Software HWinfo intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install HWiNFO.HWiNFO64 }
+STRING if ($response -eq 'J') { winget install REALiX.HWiNFO }
 ENTER
 ENTER
 REM Install FreeFileSync
+REM FreeFileSync N.I.O.
 STRING Write-Host "Moechten Sie die Software FreeFileSync intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
