@@ -308,7 +308,7 @@ GUI r
 DELAY 2000
 REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
 ENTER
-STRING powershell
+STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
 DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
