@@ -318,8 +318,10 @@ ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING j
 DELAY 2000
+STRING cd \users\*\desktop
 ENTER
-STRING .\Desktop\MAD_Install_Standard_SW.ps1
+DELAY 2000
+STRING MAD_Install_Standard_SW.ps1
 DELAY 2000
 ENTER
 REM Ende
