@@ -23,6 +23,13 @@ REM Office 365 hinzugefügt aber nicht getestet.
 REM Windows SUB System for Linux hinzugefügt aber nicht getestet.
 REM VSCode hinzugefügt aber nicht getestet.
 
+REM 20241025:
+REM Korrekturen bei den Paketnamen.
+REM bis Zeile 237 getestet.
+
+REM 20241026:
+REM Korrekturen bei den Paketnamen.
+REM bis Zeile 297 getestet.
 GUI r
 DELAY 500
 STRING powershell
@@ -243,6 +250,7 @@ STRING if ($response -eq 'J') { winget install FreeFileSync.FreeFileSync }
 ENTER
 ENTER
 REM Install GIT
+REM Git I.O.
 STRING Write-Host "Moechten Sie die Software GIT intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -251,21 +259,26 @@ STRING if ($response -eq 'J') { winget install Git.Git }
 ENTER
 ENTER
 REM Install Python
+REM Geändert auf Python.Python.3.13
+REM Python I.O.
 STRING Write-Host "Moechten Sie die Software Python intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Python.Python }
+STRING if ($response -eq 'J') { winget install Python.Python.3.13 }
 ENTER
 ENTER
-REM Install YubiKey Manager
-STRING Write-Host "Moechten Sie die Software YubiKey Manager intallieren (J/N)"
+REM Install Yubico.Authenticator
+REM Geändert auf Yubico.Authenticator
+REM Yubico.Authenticator I.O.
+STRING Write-Host "Moechten Sie die Software Yubico.Authenticator intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Yubico.YubiKeyManager }
+STRING if ($response -eq 'J') { winget install Yubico.Authenticator }
 ENTER
 REM Install Office 365
+REM Microsoft.Office N.I.O.
 STRING Write-Host "Moechten Sie die Software Office 365 intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -273,12 +286,15 @@ ENTER
 STRING if ($response -eq 'J') { winget install Microsoft.Office }
 ENTER
 REM Install Windows SUB System for Linux
+REM Funktioniert nur als Admin
+REM Microsoft.WSL I.O.
 STRING Write-Host "Moechten Sie die Software SUB System for Linux intallieren
 ENTER
 STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install --id Microsoft.WSL }
 REM Install Visual Studio Code
+REM Microsoft.VisualStudioCode I.O.
 STRING Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
