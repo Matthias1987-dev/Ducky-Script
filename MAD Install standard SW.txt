@@ -288,7 +288,7 @@ ENTER
 REM Install Windows SUB System for Linux
 REM Funktioniert nur als Admin
 REM Microsoft.WSL I.O.
-STRING Write-Host "Moechten Sie die Software SUB System for Linux intallieren
+STRING Write-Host "Moechten Sie die Software SUB System for Linux intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
