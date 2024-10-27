@@ -30,6 +30,10 @@ REM bis Zeile 237 getestet.
 REM 20241026:
 REM Korrekturen bei den Paketnamen.
 REM bis Zeile 297 getestet.
+
+REM 20241027:
+REM Automatische installation von WinGet wenn nötig.
+
 GUI r
 DELAY 500
 STRING powershell
@@ -46,6 +50,28 @@ ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING j
 DELAY 500
+ENTER
+STRING # Überprüfen, ob winget installiert ist
+ENTER
+STRING if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+ENTER
+STRING Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+ENTER
+STRING # Herunterladen der winget Installationsdatei
+ENTER
+STRING Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+ENTER
+STRING # Installieren der heruntergeladenen Datei
+ENTER
+STRING Add-AppxPackage -Path "winget.msixbundle"
+ENTER
+STRING Write-Output "winget wurde erfolgreich installiert."
+ENTER
+STRING } else {
+ENTER
+STRING Write-Output "winget ist bereits installiert."
+ENTER
+STRING }
 ENTER
 REM Install WinRar
 REM Geändert auf WinRar.
