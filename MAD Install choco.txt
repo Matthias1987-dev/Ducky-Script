@@ -1,3 +1,47 @@
 REM Install chocolatey
 REM noch nicht fertig.
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+REM Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+REM Autor: MAD
+REM Description: Install Chocolatey
+REM Dependencies: PowerShell
+REM Version: 1.0
+REM title: MAD install cocolatey
+REM TEST I.O.
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING cd .\Desktop\
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING notepad MAD_install_chocolatey.ps1
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 500
+STRING Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+CTRL s
+WAIT_FOR_BUTTON_PRESS
+ALT F4
+GUI r
+DELAY 2000
+REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+ENTER
+STRING powershell
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING set-executionpolicy -scope currentuser remotesigned
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 2000
+ENTER
+STRING .\Desktop\MAD_install_chocolatey.ps1
+DELAY 2000
+ENTER
