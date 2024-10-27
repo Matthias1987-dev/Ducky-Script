@@ -5,18 +5,11 @@ REM Version: 1.0
 REM title: MAD Install standard SW
 REM
 REM TEST N.I.O.
-REM Abfrage ob Winget installiert ist
-REM teamviewer fehlt noch
-REM VM Workstation fehlt noch
-REM WIN32 Disk Imager fehlt noch
-REM Discord fehlt noch
-REM FileZilla fehlt noch
-REM FotoSortierer fehlt noch
-REM Yamaha THR Remote fehlt noch
-REM SD Formatter fehlt noch
-REM Zoom edith fehlt noch
-REM Cura Ultimaker fehlt noch
-REM Repetier-Host fehlt noch
+REM VM Workstation N.I.O.
+REM ProfiCad N.I.O.
+REM SweetHome3D N.I.O.
+REM FreeFileSync N.I.O.
+REM Office 365 N.I.O.
 
 REM 20241013:
 REM Office 365 hinzugefügt aber nicht getestet.
@@ -33,6 +26,19 @@ REM bis Zeile 297 getestet.
 
 REM 20241027:
 REM Automatische installation von WinGet wenn nötig.
+REM Abfrage ob Winget installiert ist
+REM TeamViewer hinzugefügt
+REM WIN32 Disk hinzugefügt
+REM Discord vorbereitet zur installation
+REM FileZilla vorbereitet zur installation
+REM FotoSortierer vorbereitet zur installation
+REM Yamaha THR Remote vorbereitet zur installation
+REM SD Formatter vorbereitet zur installation
+REM Zoom edith vorbereitet zur installation
+REM Cura Ultimaker vorbereitet zur installation
+REM Repetier-Host vorbereitet zur installation
+REM Choco vorbereitet zur installation
+
 
 GUI r
 DELAY 500
@@ -72,6 +78,114 @@ ENTER
 STRING Write-Output "winget ist bereits installiert."
 ENTER
 STRING }
+ENTER
+REM Install Chocolatey
+REM Chocolatey N.I.O.
+STRING Write-Host "Moechten Sie die Software Chocolatey intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install TeamViewer
+REM TeamViewer I.O.
+STRING Write-Host "Moechten Sie die Software TeamViewer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install TeamViewer.TeamViewer }
+ENTER
+ENTER
+REM VM Workstation
+REM VM Workstation N.I.O.
+STRING Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install VMWorkstation.VMWorkstation }
+ENTER
+ENTER
+REM Install Win32 Disk Imager
+REM Win32 Disk Imager N.I.O.
+STRING Write-Host "Moechten Sie die Software Win32 Disk Imager intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install Win32diskimager.win32diskimager }
+ENTER
+ENTER
+REM Install Discord
+REM Discord N.I.O.
+STRING Write-Host "Moechten Sie die Software Discord intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install FileZilla
+REM FileZilla N.I.O.
+STRING Write-Host "Moechten Sie die Software FileZilla intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install FotoSortierer.
+REM FotoSortierer N.I.O.
+STRING Write-Host "Moechten Sie die FotoSortierer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install Yamaha THR Remote
+REM Yamaha THR Remote N.I.O.
+STRING Write-Host "Moechten Sie die Software Yamaha THR Remote intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install SD Formatter
+REM SD Formater N.I.O.
+STRING Write-Host "Moechten Sie die Software SD Formatter intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install Zoom edith
+REM Zoom Edith N.I.O.
+STRING Write-Host "Moechten Sie die Software Zoom Edith intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM Install Cura Ultimaker
+REM Cura Ultimaker N.I.O.
+STRING Write-Host "Moechten Sie die Software Cura Ultimaker intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+ENTER
+REM  Install Repetier-Host
+REM Repetier-Host N.I.O.
+STRING Write-Host "Moechten Sie die Software Repetier-Host intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
 ENTER
 REM Install WinRar
 REM Geändert auf WinRar.
@@ -351,5 +465,3 @@ STRING MAD_Install_Standard_SW.ps1
 DELAY 2000
 ENTER
 REM Ende
-REM Test
-REM neu
