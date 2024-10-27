@@ -1,0 +1,285 @@
+REM Author: MAD
+REM Description: 
+REM Dependencies: PowerShell
+REM Version: 1.0
+REM title: MAD WinGet Install Del SW
+REM Kopie von MAD Install standard SW
+REM Geändert um in eine Tabelle die benötigte SW einzufügen.
+REM Abfrage ob das Programm bereits vorhanden ist und ob es gelöscht oder installiert werden soll.
+
+
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING cd .\Desktop\
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING notepad MAD_WinGet_Install_Del_Sw.ps1
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 500
+ENTER
+STRING # Überprüfen, ob winget installiert ist
+ENTER
+STRING if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+ENTER
+STRING Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+ENTER
+STRING # Herunterladen der winget Installationsdatei
+ENTER
+STRING Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+ENTER
+STRING # Installieren der heruntergeladenen Datei
+ENTER
+STRING Add-AppxPackage -Path "winget.msixbundle"
+ENTER
+STRING Write-Output "winget wurde erfolgreich installiert."
+ENTER
+STRING } else {
+ENTER
+STRING Write-Output "winget ist bereits installiert."
+ENTER
+STRING }
+ENTER
+ENTER
+STRING # Definiere die Liste der Programme
+ENTER
+STRING $programme = @(
+ENTER
+STRING "Chocolatey"
+ENTER
+STRING "TeamViewer"
+ENTER
+STRING "Win32 Disk Imager"
+ENTER
+STRING "Discord"
+ENTER
+STRING "Cura Ultimaker"
+ENTER
+STRING "WinRar"
+ENTER
+STRING "PuTTy"
+ENTER
+STRING "Telegram"
+ENTER
+STRING "StikyPassword"
+ENTER
+STRING "Raspberry Pi Imager"
+ENTER
+STRING "Notepad++"
+ENTER
+STRING "Visual Studio Code"
+ENTER
+STRING "RealVNC Viewer"
+ENTER
+STRING "QFinder Pro"
+ENTER
+STRING "Nextcloud"
+ENTER
+STRING "TuxGuitar"
+ENTER
+STRING "Audacity"
+ENTER
+STRING "balenaEtcher"
+ENTER
+STRING "Arduino"
+ENTER
+STRING "qFlipper"
+ENTER
+STRING "FreeCAD"
+ENTER
+STRING "Jamulus"
+ENTER
+STRING "HWinfo"
+ENTER
+STRING "GIT"
+ENTER
+STRING "Python 3.13"
+ENTER
+STRING "Yubico.Authenticator"
+ENTER
+STRING "Windows SUB System for Linux"
+ENTER
+STRING )
+ENTER
+STRING $paket = @(
+ENTER
+STRING "Chocolatey.Chocolatey"
+ENTER
+STRING "TeamViewer.TeamViewer"
+ENTER
+STRING "Win32diskimager.win32diskimager"
+ENTER
+STRING "Discord.Discord"
+ENTER
+STRING "Ultimaker.Cura"
+ENTER
+STRING "WinRAR"
+ENTER
+STRING "PuTTY.PuTTY"
+ENTER
+STRING "Telegram.TelegramDesktop"
+ENTER
+STRING "LamantineSoftware.StickyPassword"
+ENTER
+STRING "RaspberryPiFoundation.RaspberryPiImager"
+ENTER
+STRING "Notepad++.Notepad++"
+ENTER
+STRING "Microsoft.VisualStudioCode"
+ENTER
+STRING "RealVNC.VNCViewer"
+ENTER
+STRING "QNAP.QfinderPro"
+ENTER
+STRING "Nextcloud.NextcloudDesktop"
+ENTER
+STRING "TuxGuitar.TuxGuitar"
+ENTER
+STRING "Audacity.Audacity"
+ENTER
+STRING "balena.etcher"
+ENTER
+STRING "ArduinoSA.IDE.stable"
+ENTER
+STRING "FlipperDevicesInc.qFlipper"
+ENTER
+STRING "FreeCAD.FreeCAD"
+ENTER
+STRING "VolkerFischer.Jamulus"
+ENTER
+STRING "REALiX.HWiNFO"
+ENTER
+STRING "Git.Git"
+ENTER
+STRING "Python.Python.3.13"
+ENTER
+STRING "Yubico.Authenticator"
+ENTER
+STRING "--id Microsoft.WSL"
+ENTER
+STRING )
+ENTER
+ENTER
+ENTER
+STRING # Funktion zur Überprüfung, ob ein Programm installiert ist
+ENTER
+STRING function IstProgrammInstalliert($programmName) {
+ENTER
+STRING    $installedPrograms = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*,
+ENTER
+STRING                                          HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* |
+ENTER
+STRING                         Select-Object DisplayName
+ENTER
+ENTER
+STRING     foreach ($installedProgram in $installedPrograms) {
+ENTER
+STRING         if ($installedProgram.DisplayName -like "*$programmName*") {
+ENTER
+STRING             return $true
+ENTER
+STRING         }
+ENTER
+STRING     }
+ENTER
+STRING     return $false
+ENTER
+STRING }
+ENTER
+STRING # Iteriere über die Liste der Programme
+ENTER
+STRING foreach ($programm in $programme) {
+ENTER
+STRING     if (IstProgrammInstalliert $programm) {
+ENTER
+STRING         Write-Host "$programm ist bereits installiert."
+ENTER
+STRING         $aktion = Read-Host "Möchten Sie $programm deinstallieren oder überspringen? (deinstallieren/überspringen)"
+ENTER
+ENTER        
+STRING        if ($aktion -eq "deinstallieren") {
+ENTER
+STRING            # Hier den Deinstallationsbefehl für das Programm einfügen
+ENTER
+STRING            Write-Host "Deinstalliere $programm..."
+ENTER
+STRING            # Beispiel: Uninstall-Befehl für das Programm
+ENTER
+STRING        } else {
+ENTER
+STRING            Write-Host "$programm wird übersprungen."
+ENTER
+STRING        }
+ENTER
+STRING    } else {
+ENTER
+STRING        $aktion = Read-Host "Möchten Sie $programm installieren oder überspringen? (installieren/überspringen)"
+ENTER
+ENTER        
+STRING         if ($aktion -eq "installieren") {
+ENTER
+STRING             # Hier den Installationsbefehl für das Programm einfügen
+ENTER
+STRING             Write-Host "Installiere $programm..."
+ENTER
+STRING             # Beispiel: Start-Process -FilePath "Pfad\zum\Installer.exe" -ArgumentList "/S"
+ENTER
+STRING         } else {
+ENTER
+STRING             Write-Host "$programm wird übersprungen."
+ENTER
+STRING         }
+ENTER
+STRING     }
+ENTER
+STRING }
+ENTER
+REM VM Workstation
+REM Install FileZilla
+REM Install FotoSortierer.
+REM Install Yamaha THR Remote
+REM Install SD Formatter
+REM Install Zoom edith
+REM  Install Repetier-Host
+REM Install ProfiCAD
+REM Install SweetHome3D
+REM Geändert auf winget install eTeks.SweetHome3D --accept-package-agreements --accept-source-agreements
+REM Probleme mit der Lizenz.
+REM Funktioniert evtl. mit PowerShell als Admin
+REM Install FreeFileSync
+REM Install Office 365
+ENTER
+CTRL s
+WAIT_FOR_BUTTON_PRESS
+ALT F4
+GUI r
+DELAY 2000
+REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+ENTER
+STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING set-executionpolicy -scope currentuser remotesigned
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 2000
+WAIT_FOR_BUTTON_PRESS
+STRING cd \users\*\desktop
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING .\MAD_WinGet_Install_Del_Sw.ps1
+DELAY 2000
+WAIT_FOR_BUTTON_PRESS
+ENTER
+REM Ende

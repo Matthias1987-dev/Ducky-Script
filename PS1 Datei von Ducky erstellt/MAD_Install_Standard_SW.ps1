@@ -1,17 +1,62 @@
-# Überprüfen, ob winget installiert ist
+
+# berprfen, ob winget installiert ist
 if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-    Write-Output "winget ist nicht installiert. Installation wird gestartet..."
-
-    # Herunterladen der winget Installationsdatei
-    Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
-
-    # Installieren der heruntergeladenen Datei
-    Add-AppxPackage -Path "winget.msixbundle"
-
-    Write-Output "winget wurde erfolgreich installiert."
+Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+# Herunterladen der winget Installationsdatei
+Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+# Installieren der heruntergeladenen Datei
+Add-AppxPackage -Path "winget.msixbundle"
+Write-Output "winget wurde erfolgreich installiert."
 } else {
-    Write-Output "winget ist bereits installiert."
+Write-Output "winget ist bereits installiert."
 }
+Write-Host "Moechten Sie die Software Chocolatey intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install Chocolatey.Chocolatey }
+
+Write-Host "Moechten Sie die Software TeamViewer intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install TeamViewer.TeamViewer }
+
+Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die Software Win32 Disk Imager intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install Win32diskimager.win32diskimager }
+
+Write-Host "Moechten Sie die Software Discord intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install Discord.Discord }
+
+Write-Host "Moechten Sie die Software FileZilla intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die FotoSortierer intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die Software Yamaha THR Remote intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die Software SD Formatter intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die Software Zoom Edith intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+
+Write-Host "Moechten Sie die Software Cura Ultimaker intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install Ultimaker.Cura }
+
+Write-Host "Moechten Sie die Software Repetier-Host intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
 
 Write-Host "Moechten Sie die Software WinRar intallieren (J/N)"
 $response = Read-Host
@@ -67,7 +112,7 @@ if ($response -eq 'J') { winget install balena.etcher }
 
 Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install ProfiCAD.ProfiCAD }
+if ($response -eq 'J') { winget install  }
 
 Write-Host "Moechten Sie die Software Arduino intallieren (J/N)"
 $response = Read-Host
@@ -95,7 +140,7 @@ if ($response -eq 'J') { winget install REALiX.HWiNFO }
 
 Write-Host "Moechten Sie die Software FreeFileSync intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install FreeFileSync.FreeFileSync }
+if ($response -eq 'J') { winget install  }
 
 Write-Host "Moechten Sie die Software GIT intallieren (J/N)"
 $response = Read-Host
@@ -110,10 +155,9 @@ $response = Read-Host
 if ($response -eq 'J') { winget install Yubico.Authenticator }
 Write-Host "Moechten Sie die Software Office 365 intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install Microsoft.Office }
+if ($response -eq 'J') { winget install  }
 Write-Host "Moechten Sie die Software SUB System for Linux intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install --id Microsoft.WSL }
-Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
+if ($response -eq 'J') { winget install --id Microsoft.WSL }Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
 $response = Read-Host
 if ($response -eq 'J') { winget install Microsoft.VisualStudioCode }
