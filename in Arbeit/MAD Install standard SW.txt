@@ -464,6 +464,8 @@ REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfi
 ENTER
 STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
 DELAY 500
+LEFT
+DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING set-executionpolicy -scope currentuser remotesigned
@@ -477,7 +479,7 @@ ENTER
 STRING cd \users\*\desktop
 ENTER
 DELAY 2000
-STRING MAD_Install_Standard_SW.ps1
+STRING .\MAD_Install_Standard_SW.ps1
 DELAY 2000
 WAIT_FOR_BUTTON_PRESS
 ENTER
