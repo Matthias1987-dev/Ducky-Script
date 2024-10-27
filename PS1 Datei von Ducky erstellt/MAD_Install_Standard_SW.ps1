@@ -1,3 +1,17 @@
+# Überprüfen, ob winget installiert ist
+if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+    Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+
+    # Herunterladen der winget Installationsdatei
+    Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+
+    # Installieren der heruntergeladenen Datei
+    Add-AppxPackage -Path "winget.msixbundle"
+
+    Write-Output "winget wurde erfolgreich installiert."
+} else {
+    Write-Output "winget ist bereits installiert."
+}
 
 Write-Host "Moechten Sie die Software WinRar intallieren (J/N)"
 $response = Read-Host
