@@ -7,9 +7,15 @@ REM
 REM TEST N.I.O.
 REM VM Workstation N.I.O.
 REM ProfiCad N.I.O.
-REM SweetHome3D N.I.O.
+REM SweetHome3D N.I.O. evtl. mit Adminrechten
 REM FreeFileSync N.I.O.
 REM Office 365 N.I.O.
+REM FileZilla N.I.O.
+REM FotoSortierer N.I.O.
+REM Yamaha THR Remote N.I.O.
+REM SD Formatter N.I.O.
+REM Zoom Edith N.I.O.
+
 
 REM 20241013:
 REM Office 365 hinzugefügt aber nicht getestet.
@@ -29,15 +35,15 @@ REM Automatische installation von WinGet wenn nötig.
 REM Abfrage ob Winget installiert ist
 REM TeamViewer hinzugefügt
 REM WIN32 Disk hinzugefügt
-REM Discord vorbereitet zur installation
+REM Discord hinzugefügt
 REM FileZilla vorbereitet zur installation
 REM FotoSortierer vorbereitet zur installation
 REM Yamaha THR Remote vorbereitet zur installation
 REM SD Formatter vorbereitet zur installation
 REM Zoom edith vorbereitet zur installation
-REM Cura Ultimaker vorbereitet zur installation
+REM Cura Ultimaker hinzugefügt
 REM Repetier-Host vorbereitet zur installation
-REM Choco vorbereitet zur installation
+REM Chocolatey hinzugefügt
 
 
 GUI r
@@ -80,12 +86,12 @@ ENTER
 STRING }
 ENTER
 REM Install Chocolatey
-REM Chocolatey N.I.O.
+REM Chocolatey I.O.
 STRING Write-Host "Moechten Sie die Software Chocolatey intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Chocolatey.Chocolatey }
 ENTER
 ENTER
 REM Install TeamViewer
@@ -98,16 +104,17 @@ STRING if ($response -eq 'J') { winget install TeamViewer.TeamViewer }
 ENTER
 ENTER
 REM VM Workstation
+REM Keine Pakete über WinGet gefunden
 REM VM Workstation N.I.O.
 STRING Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install VMWorkstation.VMWorkstation }
+STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install Win32 Disk Imager
-REM Win32 Disk Imager N.I.O.
+REM Win32 Disk Imager I.O.
 STRING Write-Host "Moechten Sie die Software Win32 Disk Imager intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -116,15 +123,16 @@ STRING if ($response -eq 'J') { winget install Win32diskimager.win32diskimager }
 ENTER
 ENTER
 REM Install Discord
-REM Discord N.I.O.
+REM Discord I.O.
 STRING Write-Host "Moechten Sie die Software Discord intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Discord.Discord }
 ENTER
 ENTER
 REM Install FileZilla
+REM Keine Pakete über WinGet gefunden
 REM FileZilla N.I.O.
 STRING Write-Host "Moechten Sie die Software FileZilla intallieren (J/N)"
 ENTER
@@ -134,6 +142,7 @@ STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install FotoSortierer.
+REM Keine Pakete über WinGet gefunden
 REM FotoSortierer N.I.O.
 STRING Write-Host "Moechten Sie die FotoSortierer intallieren (J/N)"
 ENTER
@@ -143,6 +152,7 @@ STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install Yamaha THR Remote
+REM Keine Pakete über WinGet gefunden
 REM Yamaha THR Remote N.I.O.
 STRING Write-Host "Moechten Sie die Software Yamaha THR Remote intallieren (J/N)"
 ENTER
@@ -152,6 +162,7 @@ STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install SD Formatter
+REM Keine Pakete über WinGet gefunden
 REM SD Formater N.I.O.
 STRING Write-Host "Moechten Sie die Software SD Formatter intallieren (J/N)"
 ENTER
@@ -161,6 +172,7 @@ STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install Zoom edith
+REM Keine Pakete über WinGet gefunden
 REM Zoom Edith N.I.O.
 STRING Write-Host "Moechten Sie die Software Zoom Edith intallieren (J/N)"
 ENTER
@@ -170,12 +182,12 @@ STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install Cura Ultimaker
-REM Cura Ultimaker N.I.O.
+REM Cura Ultimaker I.O.
 STRING Write-Host "Moechten Sie die Software Cura Ultimaker intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Ultimaker.Cura }
 ENTER
 ENTER
 REM  Install Repetier-Host
@@ -316,7 +328,7 @@ STRING Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install ProfiCAD.ProfiCAD }
+STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install Arduino
@@ -381,12 +393,13 @@ STRING if ($response -eq 'J') { winget install REALiX.HWiNFO }
 ENTER
 ENTER
 REM Install FreeFileSync
+REM Keine Pakete über WinGet gefunden
 REM FreeFileSync N.I.O.
 STRING Write-Host "Moechten Sie die Software FreeFileSync intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install FreeFileSync.FreeFileSync }
+STRING if ($response -eq 'J') { winget install  }
 ENTER
 ENTER
 REM Install GIT
@@ -418,12 +431,13 @@ ENTER
 STRING if ($response -eq 'J') { winget install Yubico.Authenticator }
 ENTER
 REM Install Office 365
+REM Keine Pakete über WinGet gefunden
 REM Microsoft.Office N.I.O.
 STRING Write-Host "Moechten Sie die Software Office 365 intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install Microsoft.Office }
+STRING if ($response -eq 'J') { winget install  }
 ENTER
 REM Install Windows SUB System for Linux
 REM Funktioniert nur als Admin
