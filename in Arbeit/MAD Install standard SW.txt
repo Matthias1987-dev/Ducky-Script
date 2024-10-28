@@ -147,6 +147,7 @@ ENTER
 REM Install FotoSortierer.
 REM Keine Pakete über WinGet gefunden
 REM FotoSortierer N.I.O.
+REM Keine Pakete über Chocolatey gefunden
 STRING Write-Host "Moechten Sie die FotoSortierer intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -157,6 +158,7 @@ ENTER
 REM Install Yamaha THR Remote
 REM Keine Pakete über WinGet gefunden
 REM Yamaha THR Remote N.I.O.
+REM Keine Pakete über Chocolatey gefunden
 STRING Write-Host "Moechten Sie die Software Yamaha THR Remote intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
