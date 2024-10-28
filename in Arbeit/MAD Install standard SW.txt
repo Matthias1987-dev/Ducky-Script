@@ -454,13 +454,6 @@ ENTER
 STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install --id Microsoft.WSL }
-REM Install Visual Studio Code
-REM Microsoft.VisualStudioCode I.O.
-STRING Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
-ENTER
-STRING $response = Read-Host
-ENTER
-STRING if ($response -eq 'J') { winget install Microsoft.VisualStudioCode }
 ENTER
 CTRL s
 WAIT_FOR_BUTTON_PRESS
