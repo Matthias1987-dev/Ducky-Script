@@ -5,10 +5,8 @@ REM Version: 1.0
 REM title: MAD Install standard SW
 REM
 REM TEST N.I.O.
-REM VM Workstation N.I.O.
 REM ProfiCad N.I.O.
 REM SweetHome3D N.I.O. evtl. mit Adminrechten
-REM FreeFileSync N.I.O.
 REM Office 365 N.I.O.
 REM FileZilla N.I.O.
 REM FotoSortierer N.I.O.
@@ -47,6 +45,7 @@ REM Chocolatey hinzugefügt
 
 REM 20241028:
 REM VM Workstation hinzugefügt über Chocolatey
+REM FileZilla hinzugefügt über Chocolatey
 
 GUI r
 DELAY 500
@@ -107,7 +106,6 @@ ENTER
 ENTER
 REM VM Workstation
 REM Keine Pakete über WinGet gefunden
-REM VM Workstation N.I.O.
 REM VW Workstation über Chocolatey nur über Admin Rechte
 REM VM Workstation I.O.
 STRING Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
@@ -137,12 +135,13 @@ ENTER
 ENTER
 REM Install FileZilla
 REM Keine Pakete über WinGet gefunden
-REM FileZilla N.I.O.
+REM FileZilla über Chocolatey nur über Admin Rechte
+REM FileZilla I.O.
 STRING Write-Host "Moechten Sie die Software FileZilla intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { choco install filezilla }
 ENTER
 ENTER
 REM Install FotoSortierer.
