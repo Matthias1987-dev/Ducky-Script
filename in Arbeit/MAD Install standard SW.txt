@@ -45,6 +45,8 @@ REM Cura Ultimaker hinzugefügt
 REM Repetier-Host vorbereitet zur installation
 REM Chocolatey hinzugefügt
 
+REM 20241028:
+REM VM Workstation hinzugefügt über Chocolatey
 
 GUI r
 DELAY 500
@@ -106,11 +108,13 @@ ENTER
 REM VM Workstation
 REM Keine Pakete über WinGet gefunden
 REM VM Workstation N.I.O.
+REM VW Workstation über Chocolatey nur über Admin Rechte
+REM VM Workstation I.O.
 STRING Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { choco install vmware-workstation-player }
 ENTER
 ENTER
 REM Install Win32 Disk Imager
