@@ -5,7 +5,6 @@ REM Version: 1.0
 REM title: MAD Install standard SW
 REM
 REM TEST N.I.O.
-REM ProfiCad N.I.O.
 REM SweetHome3D N.I.O. evtl. mit Adminrechten
 REM Office 365 N.I.O.
 REM FotoSortierer N.I.O.
@@ -47,6 +46,10 @@ REM FileZilla hinzugefügt über Chocolatey
 REM Yamaha THR nicht gefunden
 REM FotoSortierer nicht gefunden
 REM SD Formatter hinzugefügt über Chocolatey
+
+REM 20241029:
+REM ProfiCAD hinzugefügt über Chocolatey
+REM Office 365 hinzugefügt
 
 GUI r
 DELAY 500
@@ -440,11 +443,23 @@ ENTER
 REM Install Office 365
 REM Keine Pakete über WinGet gefunden
 REM Microsoft.Office N.I.O.
+REM Office 365 über Chocolatey nur über Admin Rechte
+REM Office 365 I.O.
 STRING Write-Host "Moechten Sie die Software Office 365 intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { choco install office365business }
+ENTER
+REM Install ProfiCAD
+REM Keine Pakete über WinGet gefunden
+REM ProfiCAD über Chocolatey nur über Admin Rechte
+REM ProfiCAD I.O.
+STRING Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { choco install proficad }
 ENTER
 REM Install Windows SUB System for Linux
 REM Funktioniert nur als Admin
