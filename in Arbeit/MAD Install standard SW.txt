@@ -50,6 +50,7 @@ REM SD Formatter hinzugefügt über Chocolatey
 REM 20241029:
 REM ProfiCAD hinzugefügt über Chocolatey
 REM Office 365 hinzugefügt
+REM SweetHome3D hinzugefügt über Chocolatey
 
 GUI r
 DELAY 500
@@ -375,11 +376,13 @@ REM Geändert auf winget install eTeks.SweetHome3D --accept-package-agreements -
 REM Probleme mit der Lizenz.
 REM Funktioniert evtl. mit PowerShell als Admin
 REM SweetHome3D N.I.O.
+REM SweetHome3D über Chocolatey nur über Admin Rechte
+REM SweetHome3D I.O.
 STRING Write-Host "Moechten Sie die Software SweetHome3D intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install eTeks.SweetHome3D --accept-package-agreements --accept-source-agreements }
+STRING if ($response -eq 'J') { choco install sweet-home-3d }
 ENTER
 ENTER
 REM Install Jamulus
