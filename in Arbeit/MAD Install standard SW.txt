@@ -5,7 +5,6 @@ REM Version: 1.0
 REM title: MAD Install standard SW
 REM
 REM TEST N.I.O.
-REM SweetHome3D N.I.O. evtl. mit Adminrechten
 REM Office 365 N.I.O.
 REM FotoSortierer N.I.O.
 REM Yamaha THR Remote N.I.O.
