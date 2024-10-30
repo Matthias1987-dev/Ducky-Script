@@ -4,15 +4,35 @@ REM Dependencies: PowerShell
 REM Version: 1.0
 REM title: MAD Install standard SW
 REM
+REM Wunschliste:
+REM Rufus
+REM ImageResizerSetup-3.1.1
+REM TinyPicSetup
+REM allwaysync-x64-16-0-1
+REM cdbxp_setup_4.5.8.7128_x64_minimal
+REM AntiTwin_Setup
+REM FastCopy
+REM FreeFileSync_11.27_Windows_Setup
+REM fvdsuite-2.4.2
+REM livestreamer-v1.12.2-win32
+REM TwitchLeecher_1.8.4
+REM DroidCam.Setup.6.2.2
+REM FoxitPDFReader20232_L10N_Setup_Prom
+REM mix pad setup
+REM SteamSetup
+REM TeamSpeak3-Client-win64-3.5.6
+REM tsetup-x64.3.2.2
+REM vlc-3.0.14-win64
+REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
+REM xps_to_pdf
+
 REM TEST N.I.O.
-REM Office 365 N.I.O.
 REM FotoSortierer N.I.O.
 REM Yamaha THR Remote N.I.O.
 REM Zoom Edith N.I.O.
 
 
 REM 20241013:
-REM Office 365 hinzugefügt aber nicht getestet.
 REM Windows SUB System for Linux hinzugefügt aber nicht getestet.
 REM VSCode hinzugefügt aber nicht getestet.
 
