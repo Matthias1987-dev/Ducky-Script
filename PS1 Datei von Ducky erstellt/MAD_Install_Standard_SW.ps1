@@ -5,7 +5,7 @@ Write-Output "winget ist nicht installiert. Installation wird gestartet..."
 # Herunterladen der winget Installationsdatei
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
 # Installieren der heruntergeladenen Datei
-Add-AppxPackage -Path "winget.msixbundle"
+Add-AppxPackage -Path "erfolgreiixbundle"
 Write-Output "winget wurde erfolgreich installiert."
 } else {
 Write-Output "winget ist bereits installiert."
@@ -20,7 +20,7 @@ if ($response -eq 'J') { winget install TeamViewer.TeamViewer }
 
 Write-Host "Moechten Sie die Software VM Workstation intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install  }
+if ($response -eq 'J') { choco install vmware-workstation-player }
 
 Write-Host "Moechten Sie die Software Win32 Disk Imager intallieren (J/N)"
 $response = Read-Host
@@ -32,7 +32,7 @@ if ($response -eq 'J') { winget install Discord.Discord }
 
 Write-Host "Moechten Sie die Software FileZilla intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install  }
+if ($response -eq 'J') { choco install filezilla }
 
 Write-Host "Moechten Sie die FotoSortierer intallieren (J/N)"
 $response = Read-Host
@@ -44,7 +44,7 @@ if ($response -eq 'J') { winget install  }
 
 Write-Host "Moechten Sie die Software SD Formatter intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install  }
+if ($response -eq 'J') { choco install sdcard-formatter }
 
 Write-Host "Moechten Sie die Software Zoom Edith intallieren (J/N)"
 $response = Read-Host
@@ -128,7 +128,7 @@ if ($response -eq 'J') { winget install FreeCAD.FreeCAD }
 
 Write-Host "Moechten Sie die Software SweetHome3D intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install eTeks.SweetHome3D --accept-package-agreements --accept-source-agreements }
+if ($response -eq 'J') { choco install sweet-home-3d }
 
 Write-Host "Moechten Sie die Software Jamulus intallieren (J/N)"
 $response = Read-Host
@@ -155,9 +155,31 @@ $response = Read-Host
 if ($response -eq 'J') { winget install Yubico.Authenticator }
 Write-Host "Moechten Sie die Software Office 365 intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install  }
+if ($response -eq 'J') { choco install office365business }
+Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { choco install proficad }
 Write-Host "Moechten Sie die Software SUB System for Linux intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install --id Microsoft.WSL }Write-Host "Moechten Sie die Software Visual Studio Code intallieren (J/N)"
+if ($response -eq 'J') { winget install --id Microsoft.WSL }
+Write-Host "Moechten Sie die Software Rufus intallieren (J/N)"
 $response = Read-Host
-if ($response -eq 'J') { winget install Microsoft.VisualStudioCode }
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software ImageResizer intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software TinyPic intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software allwaysync intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software cdbxp intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software AntiTwin intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
+Write-Host "Moechten Sie die Software FastCopy intallieren (J/N)"
+$response = Read-Host
+if ($response -eq 'J') { winget install  }
