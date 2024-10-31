@@ -27,6 +27,8 @@ REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
 REM xps_to_pdf
 REM PrusaSlicer
 
+REM Abfrage ob installiert oder deinstalliert werden soll.
+
 REM TEST N.I.O.
 REM FotoSortierer N.I.O.
 REM Yamaha THR Remote N.I.O.
@@ -84,6 +86,20 @@ REM allwaysync-x64-16-0-1
 REM cdbxp_setup_4.5.8.7128_x64_minimal
 REM AntiTwin_Setup
 REM FastCopy
+REM FreeFileSync_11.27_Windows_Setup
+REM fvdsuite-2.4.2
+REM livestreamer-v1.12.2-win32
+REM TwitchLeecher_1.8.4
+REM DroidCam.Setup.6.2.2
+REM FoxitPDFReader20232_L10N_Setup_Prom
+REM mix pad setup
+REM SteamSetup
+REM TeamSpeak3-Client-win64-3.5.6
+REM tsetup-x64.3.2.2
+REM vlc-3.0.14-win64
+REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
+REM xps_to_pdf
+REM PrusaSlicer
 
 GUI r
 DELAY 500
@@ -569,7 +585,133 @@ STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install  }
 ENTER
-
+REM Install FreeFileSync
+REM Vorbereitung Install FreeFileSync
+REM FreeFileSync N.I.O.
+STRING Write-Host "Moechten Sie die Software FreeFileSync intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install fvdsuite
+REM Vorbereitung Install fvdsuite
+REM fvdsuite N.I.O.
+STRING Write-Host "Moechten Sie die Software fvdsuite intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install livestreamer
+REM Vorbereitung Install livestreamer
+REM livestreamer N.I.O.
+STRING Write-Host "Moechten Sie die Software livestreamer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install TwitchLeecher
+REM Vorbereitung Install TwitchLeecher
+REM TwitchLeecher N.I.O.
+STRING Write-Host "Moechten Sie die Software TwitchLeecher intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install DroidCam   
+REM Vorbereitung Install DroidCam
+REM DroidCam N.I.O.
+STRING Write-Host "Moechten Sie die Software DroidCam intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install FoxitPDFReader
+REM Vorbereitung Install FoxitPDFReader
+REM FoxitPDFReader N.I.O.
+STRING Write-Host "Moechten Sie die Software FoxitPDFReader intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install mix pad
+REM Vorbereitung Install mix pad
+REM mix pad N.I.O.
+STRING Write-Host "Moechten Sie die Software mix pad intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install Steam
+REM Vorbereitung Install Steam
+REM Steam N.I.O.
+STRING Write-Host "Moechten Sie die Software Steam intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install TeamSpeak3
+REM Vorbereitung Install TeamSpeak3
+REM TeamSpeak3 N.I.O.
+STRING Write-Host "Moechten Sie die Software TeamSpeak3 intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install tsetup
+REM Vorbereitung Install tsetup
+REM tsetup N.I.O.
+STRING Write-Host "Moechten Sie die Software tsetup intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install vlc
+REM Vorbereitung Install vlc
+REM vlc N.I.O.
+STRING Write-Host "Moechten Sie die Software vlc intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install Web_Designer
+REM Vorbereitung Install Web_Designer
+REM Web_Designer N.I.O.
+STRING Write-Host "Moechten Sie die Software Web_Designer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install xps_to_pdf
+REM Vorbereitung Install xps_to_pdf
+REM xps_to_pdf N.I.O.
+STRING Write-Host "Moechten Sie die Software xps_to_pdf intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install PrusaSlicer
+REM Vorbereitung Install PrusaSlicer
+REM PrusaSlicer N.I.O.
+STRING Write-Host "Moechten Sie die Software PrusaSlicer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Ende
 CTRL s
 WAIT_FOR_BUTTON_PRESS
 ALT F4
