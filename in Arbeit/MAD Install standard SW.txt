@@ -25,6 +25,7 @@ REM tsetup-x64.3.2.2
 REM vlc-3.0.14-win64
 REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
 REM xps_to_pdf
+REM PrusaSlicer
 
 REM TEST N.I.O.
 REM FotoSortierer N.I.O.
@@ -70,6 +71,19 @@ REM 20241029:
 REM ProfiCAD hinzugefügt über Chocolatey
 REM Office 365 hinzugefügt
 REM SweetHome3D hinzugefügt über Chocolatey
+
+REM 20241030:
+REM Wunschliste hinzugefügt.
+
+REM 20241031:
+REM Vorbereitung:
+REM Rufus
+REM ImageResizerSetup-3.1.1
+REM TinyPicSetup
+REM allwaysync-x64-16-0-1
+REM cdbxp_setup_4.5.8.7128_x64_minimal
+REM AntiTwin_Setup
+REM FastCopy
 
 GUI r
 DELAY 500
@@ -492,6 +506,70 @@ STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install --id Microsoft.WSL }
 ENTER
+REM Install Rufus
+REM Vorbereitung Install Rufus
+REM Rufus N.I.O.
+STRING Write-Host "Moechten Sie die Software Rufus intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install ImageResizer
+REM Vorbereitung Install ImageResizer
+REM ImageResizer N.I.O.
+STRING Write-Host "Moechten Sie die Software ImageResizer intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install TinyPic
+REM Vorbereitung Install TinyPic
+REM TinyPic N.I.O.
+STRING Write-Host "Moechten Sie die Software TinyPic intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install allwaysync
+REM Vorbereitung Install allwaysync
+REM allwaysync N.I.O.
+STRING Write-Host "Moechten Sie die Software allwaysync intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install cdbxp
+REM Vorbereitung Install cdbxp
+REM cdbxp N.I.O.
+STRING Write-Host "Moechten Sie die Software cdbxp intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install AntiTwin
+REM Vorbereitung Install AntiTwin
+REM AntiTwin N.I.O.
+STRING Write-Host "Moechten Sie die Software AntiTwin intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install FastCopy
+REM Vorbereitung Install FastCopy
+REM FastCopy N.I.O.
+STRING Write-Host "Moechten Sie die Software FastCopy intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install  }
+ENTER
+
 CTRL s
 WAIT_FOR_BUTTON_PRESS
 ALT F4
