@@ -4,6 +4,8 @@ REM Dependencies: PowerShell
 REM Version: 1.0
 REM title: MAD Win Prog del
 REM TEST I.O.
+REM 20241031:
+REM Abfrage ob WinGet installiert ist. Geplant das später Programme über WinGet gelöscht werden.
 GUI r
 DELAY 500
 STRING powershell
@@ -20,6 +22,28 @@ ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING j
 DELAY 500
+ENTER
+STRING # Überprüfen, ob winget installiert ist
+ENTER
+STRING if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+ENTER
+STRING Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+ENTER
+STRING # Herunterladen der winget Installationsdatei
+ENTER
+STRING Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+ENTER
+STRING # Installieren der heruntergeladenen Datei
+ENTER
+STRING Add-AppxPackage -Path "winget.msixbundle"
+ENTER
+STRING Write-Output "winget wurde erfolgreich installiert."
+ENTER
+STRING } else {
+ENTER
+STRING Write-Output "winget ist bereits installiert."
+ENTER
+STRING }
 ENTER
 REM Uninstall WhatsApp app
 STRING Write-Host "Moechten Sie die WhatsApp-App wirklich entfernen? (J/N)"
