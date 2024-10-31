@@ -11,9 +11,14 @@ STRING powershell
 DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
-STRING cd .\Desktop\
-DELAY 2000
+STRING New-Item -ItemType Directory -Path "Duckyskript"
+DELAY 500
 ENTER
+DELAY 500
+STRING cd .\Desktop\Duckyscript
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
 STRING notepad MAD_Test.ps1
 ENTER
 DELAY 2000
@@ -25,7 +30,11 @@ WAIT_FOR_BUTTON_PRESS
 ALT F4
 GUI r
 DELAY 2000
-STRING powershell
+REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+ENTER
+STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+DELAY 500
+LEFT
 DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
@@ -35,7 +44,13 @@ ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING j
 DELAY 2000
+WAIT_FOR_BUTTON_PRESS
 ENTER
-STRING .\Desktop\MAD_Test.ps1
+STRING cd \users\*\desktop\Duckyscript
+ENTER
 DELAY 2000
+STRING .\notepad MAD_Test.ps1
+DELAY 2000
+WAIT_FOR_BUTTON_PRESS
 ENTER
+REM Ende des Skripts

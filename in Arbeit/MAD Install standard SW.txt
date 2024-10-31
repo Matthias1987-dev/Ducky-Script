@@ -107,7 +107,11 @@ STRING powershell
 DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
-STRING cd .\Desktop\
+STRING New-Item -ItemType Directory -Path "Duckyskript"
+DELAY 500
+ENTER
+DELAY 500
+STRING cd .\Desktop\Duckyscript
 DELAY 500
 ENTER
 WAIT_FOR_BUTTON_PRESS
@@ -733,11 +737,11 @@ STRING j
 DELAY 2000
 WAIT_FOR_BUTTON_PRESS
 ENTER
-STRING cd \users\*\desktop
+STRING cd \users\*\desktop\Duckyscript
 ENTER
 DELAY 2000
 STRING .\MAD_Install_Standard_SW.ps1
 DELAY 2000
 WAIT_FOR_BUTTON_PRESS
 ENTER
-REM Ende
+REM Ende des Skripts
