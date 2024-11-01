@@ -205,13 +205,13 @@ CTRL s
 WAIT_FOR_BUTTON_PRESS
 ALT F4
 GUI r
-DELAY 2000
-REM STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
-ENTER
+DELAY 500
 STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
 DELAY 500
+ENTER
+DELAY 2000
 LEFT
-DELAY 500
+DELAY 2000
 ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING set-executionpolicy -scope currentuser remotesigned
