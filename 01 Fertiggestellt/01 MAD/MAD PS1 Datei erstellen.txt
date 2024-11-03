@@ -14,7 +14,7 @@ WAIT_FOR_BUTTON_PRESS
 STRING cd \users\*\desktop\
 DELAY 500
 ENTER
-STRING New-Item -ItemType Directory -Path "Duckyscript"
+STRING New-Item -ItemType Directory -Path ".\desktop\Duckyscript"
 DELAY 500
 ENTER
 DELAY 500
