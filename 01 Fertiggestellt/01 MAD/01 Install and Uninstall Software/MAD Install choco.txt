@@ -39,6 +39,8 @@ ENTER
 DELAY 2000
 LEFT
 DELAY 2000
+STRING j
+DELAY 2000
 ENTER
 WAIT_FOR_BUTTON_PRESS
 STRING set-executionpolicy -scope currentuser remotesigned
