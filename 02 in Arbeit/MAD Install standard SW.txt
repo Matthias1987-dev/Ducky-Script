@@ -99,7 +99,13 @@ REM tsetup-x64.3.2.2
 REM vlc-3.0.14-win64
 REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
 REM xps_to_pdf
-REM PrusaSlicer
+REM PowerToy hinzugefügt
+
+REM 20241104:
+REM Rufus hinzugefügt
+REM ImageResizer hinzugefügt
+REM AllwaySync hinzugefügt
+REM powerToy hinzugefügt
 
 GUI r
 DELAY 500
@@ -527,25 +533,25 @@ ENTER
 STRING if ($response -eq 'J') { winget install --id Microsoft.WSL }
 ENTER
 REM Install Rufus
-REM Vorbereitung Install Rufus
+REM Anwendung noch nicht getestet.
 REM Rufus N.I.O.
 STRING Write-Host "Moechten Sie die Software Rufus intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Rufus.Rufus }
 ENTER
 REM Install ImageResizer
-REM Vorbereitung Install ImageResizer
+REM Anwendung noch nicht getestet.
 REM ImageResizer N.I.O.
 STRING Write-Host "Moechten Sie die Software ImageResizer intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install BriceLambson.ImageResizerforWindows }
 ENTER
 REM Install TinyPic
-REM Vorbereitung Install TinyPic
+REM Keine Pakete über WinGet gefunden
 REM TinyPic N.I.O.
 STRING Write-Host "Moechten Sie die Software TinyPic intallieren (J/N)"
 ENTER
@@ -554,16 +560,16 @@ ENTER
 STRING if ($response -eq 'J') { winget install  }
 ENTER
 REM Install allwaysync
-REM Vorbereitung Install allwaysync
+REM Anwendung noch nicht getestet.
 REM allwaysync N.I.O.
 STRING Write-Host "Moechten Sie die Software allwaysync intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Botkind.AllwaySync }
 ENTER
 REM Install cdbxp
-REM Vorbereitung Install cdbxp
+REM Keine Pakete über WinGet gefunden
 REM cdbxp N.I.O.
 STRING Write-Host "Moechten Sie die Software cdbxp intallieren (J/N)"
 ENTER
@@ -714,6 +720,15 @@ ENTER
 STRING $response = Read-Host
 ENTER
 STRING if ($response -eq 'J') { winget install  }
+ENTER
+REM Install PowerToy
+REM Vorbereitung Install PowerToy
+REM PowerToy N.I.O.
+STRING Write-Host "Moechten Sie die Software PowerToy intallieren (J/N)"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install Microsoft.PowerToys }
 ENTER
 REM Ende
 CTRL s
