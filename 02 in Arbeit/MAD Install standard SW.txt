@@ -107,6 +107,8 @@ REM ImageResizer hinzugefügt
 REM AllwaySync hinzugefügt
 REM powerToy hinzugefügt
 
+REM 20241112:
+REM prusaSlicer hinzugefügt
 GUI r
 DELAY 500
 STRING powershell
@@ -244,6 +246,7 @@ ENTER
 REM Install Zoom edith
 REM Keine Pakete über WinGet gefunden
 REM Zoom Edith N.I.O.
+REM Keine Pakete über Chocolatey gefunden
 STRING Write-Host "Moechten Sie die Software Zoom Edith intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
@@ -261,12 +264,12 @@ STRING if ($response -eq 'J') { winget install Ultimaker.Cura }
 ENTER
 ENTER
 REM  Install Repetier-Host
-REM Repetier-Host N.I.O.
+REM Repetier-Host I.O.
 STRING Write-Host "Moechten Sie die Software Repetier-Host intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Prusa3D.PrusaSlicer }
 ENTER
 ENTER
 REM Install WinRar
@@ -393,12 +396,13 @@ ENTER
 ENTER
 REM Install ProfiCAD
 REM Keine Pakete über WinGet gefunden
-REM ProfiCad N.I.O.
+REM ProfiCad I.O.
+REM ProfiCad über Chocolatey nur über Admin Rechte
 STRING Write-Host "Moechten Sie die Software ProfiCAD intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { choco install proficad 12.4.6  }
 ENTER
 ENTER
 REM Install Arduino
