@@ -1,0 +1,269 @@
+REM Author: MAD
+REM Description: 
+REM Dependencies: PowerShell
+REM Version: 1.0
+REM title: MAD Install standard SW
+
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING New-Item -ItemType Directory -Path "Duckyskript"
+DELAY 500
+ENTER
+DELAY 500
+STRING cd .\Desktop\Duckyscript
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING notepad MAD_Install_Standard_SW.ps1
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 500
+ENTER
+STRING # Überprüfen, ob winget installiert ist
+ENTER
+STRING if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+ENTER
+STRING Write-Output "winget ist nicht installiert. Installation wird gestartet..."
+ENTER
+STRING # Herunterladen der winget Installationsdatei
+ENTER
+STRING Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "winget.msixbundle"
+ENTER
+STRING # Installieren der heruntergeladenen Datei
+ENTER
+STRING Add-AppxPackage -Path "winget.msixbundle"
+ENTER
+STRING Write-Output "winget wurde erfolgreich installiert."
+ENTER
+STRING } else {
+ENTER
+STRING Write-Output "winget ist bereits installiert."
+ENTER
+STRING }
+ENTER
+REM Install Chocolatey
+STRING Write-Host "Moechten Sie die Software Chocolatey installieren (J/N)?"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'J') { winget install Chocolatey.Chocolatey }
+ENTER
+ENTER
+
+REM Function to handle installation or uninstallation
+STRING function InstallOrUninstall($appName, $wingetId, $chocoId) {
+ENTER
+STRING Write-Host "Moechten Sie die Software $appName installieren oder deinstallieren (I/D/N)?"
+ENTER
+STRING $response = Read-Host
+ENTER
+STRING if ($response -eq 'I') { 
+ENTER
+STRING if ($wingetId) { winget install $wingetId }
+ENTER
+STRING elseif ($chocoId) { choco install $chocoId }
+ENTER
+STRING }
+ENTER
+STRING elseif ($response -eq 'D') { 
+ENTER
+STRING if ($wingetId) { winget uninstall $wingetId }
+ENTER
+STRING elseif ($chocoId) { choco uninstall $chocoId }
+ENTER
+STRING }
+ENTER
+STRING }
+ENTER
+
+REM Install TeamViewer
+STRING InstallOrUninstall "TeamViewer" "TeamViewer.TeamViewer" $null
+ENTER
+
+REM Install VM Workstation
+STRING InstallOrUninstall "VM Workstation" $null "vmware-workstation-player"
+ENTER
+
+REM Install Win32 Disk Imager
+STRING InstallOrUninstall "Win32 Disk Imager" "Win32diskimager.win32diskimager" $null
+ENTER
+
+REM Install Discord
+STRING InstallOrUninstall "Discord" "Discord.Discord" $null
+ENTER
+
+REM Install FileZilla
+STRING InstallOrUninstall "FileZilla" $null "filezilla"
+ENTER
+
+REM Install SD Formatter
+STRING InstallOrUninstall "SD Formatter" $null "sdformatter"
+ENTER
+
+REM Install Cura Ultimaker
+STRING InstallOrUninstall "Cura Ultimaker" "Ultimaker.Cura" $null
+ENTER
+
+REM Install Repetier-Host
+STRING InstallOrUninstall "Repetier-Host" "Prusa3D.PrusaSlicer" $null
+ENTER
+
+REM Install WinRar
+STRING InstallOrUninstall "WinRar" "WinRAR" $null
+ENTER
+
+REM Install PuTTY
+STRING InstallOrUninstall "PuTTY" "PuTTY.PuTTY" $null
+ENTER
+
+REM Install Telegram
+STRING InstallOrUninstall "Telegram" "Telegram.TelegramDesktop" $null
+ENTER
+
+REM Install StickyPassword
+STRING InstallOrUninstall "StickyPassword" "LamantineSoftware.StickyPassword" $null
+ENTER
+
+REM Install Raspberry Pi Imager
+STRING InstallOrUninstall "Raspberry Pi Imager" "RaspberryPiFoundation.RaspberryPiImager" $null
+ENTER
+
+REM Install Notepad++
+STRING InstallOrUninstall "Notepad++" "Notepad++.Notepad++" $null
+ENTER
+
+REM Install Visual Studio Code
+STRING InstallOrUninstall "Visual Studio Code" "Microsoft.VisualStudioCode" $null
+ENTER
+
+REM Install RealVNC Viewer
+STRING InstallOrUninstall "RealVNC Viewer" "RealVNC.VNCViewer" $null
+ENTER
+
+REM Install QFinder Pro
+STRING InstallOrUninstall "QFinder Pro" "QNAP.QfinderPro" $null
+ENTER
+
+REM Install Nextcloud
+STRING InstallOrUninstall "Nextcloud" "Nextcloud.NextcloudDesktop" $null
+ENTER
+
+REM Install TuxGuitar
+STRING InstallOrUninstall "TuxGuitar" "TuxGuitar.TuxGuitar" $null
+ENTER
+
+REM Install Audacity
+STRING InstallOrUninstall "Audacity" "Audacity.Audacity" $null
+ENTER
+
+REM Install balenaEtcher
+STRING InstallOrUninstall "balenaEtcher" "balena.etcher" $null
+ENTER
+
+REM Install ProfiCAD
+STRING InstallOrUninstall "ProfiCAD" $null "proficad"
+ENTER
+
+REM Install Arduino
+STRING InstallOrUninstall "Arduino" "ArduinoSA.IDE.stable" $null
+ENTER
+
+REM Install qFlipper
+STRING InstallOrUninstall "qFlipper" "FlipperDevicesInc.qFlipper" $null
+ENTER
+
+REM Install FreeCAD
+STRING InstallOrUninstall "FreeCAD" "FreeCAD.FreeCAD" $null
+ENTER
+
+REM Install SweetHome3D
+STRING InstallOrUninstall "SweetHome3D" $null "sweet-home-3d"
+ENTER
+
+REM Install Jamulus
+STRING InstallOrUninstall "Jamulus" "VolkerFischer.Jamulus" $null
+ENTER
+
+REM Install HWinfo
+STRING InstallOrUninstall "HWinfo" "REALiX.HWiNFO" $null
+ENTER
+
+REM Install GIT
+STRING InstallOrUninstall "GIT" "Git.Git" $null
+ENTER
+
+REM Install Python
+STRING InstallOrUninstall "Python" "Python.Python.3.13" $null
+ENTER
+
+REM Install Yubico.Authenticator
+STRING InstallOrUninstall "Yubico.Authenticator" "Yubico.Authenticator" $null
+ENTER
+
+REM Install Office 365
+STRING InstallOrUninstall "Office 365" $null "office365business"
+ENTER
+
+REM Install Windows SUB System for Linux
+STRING InstallOrUninstall "Windows SUB System for Linux" "Microsoft.WSL" $null
+ENTER
+
+REM Install Rufus
+STRING InstallOrUninstall "Rufus" "Rufus.Rufus" $null
+ENTER
+
+REM Install ImageResizer
+STRING InstallOrUninstall "ImageResizer" "BriceLambson.ImageResizerforWindows" $null
+ENTER
+
+REM Install allwaysync
+STRING InstallOrUninstall "allwaysync" "Botkind.AllwaySync" $null
+ENTER
+
+REM Install AntiTwin
+STRING InstallOrUninstall "AntiTwin" "anti-twin" $null
+ENTER
+
+REM Install FastCopy
+STRING InstallOrUninstall "FastCopy" "fastcopy" $null
+ENTER
+
+REM Install PowerToy
+STRING InstallOrUninstall "PowerToy" "Microsoft.PowerToys" $null
+ENTER
+
+CTRL s
+WAIT_FOR_BUTTON_PRESS
+ALT F4
+GUI r
+DELAY 500
+STRING powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass' -Verb RunAs"
+DELAY 500
+ENTER
+DELAY 2000
+LEFT
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING set-executionpolicy -scope currentuser remotesigned
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 2000
+WAIT_FOR_BUTTON_PRESS
+ENTER
+STRING cd \users\*\desktop\Duckyscript
+ENTER
+DELAY 2000
+STRING .\MAD_Install_Standard_SW.ps1
+DELAY 2000
+WAIT_FOR_BUTTON_PRESS
+ENTER
+REM Ende des Skripts
