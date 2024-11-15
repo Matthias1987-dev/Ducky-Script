@@ -120,6 +120,12 @@ REM FastCopy hinzugefügt
 REM 20241114:
 REM Programme die noch nicht funktionieren alle nach unten verschoben.
 
+REM 20241115:
+REM fvdsuite nicht gefunden, installation über Webseite
+REM TwitchLeecher nicht gefunden, installation über Webseite
+REM DroidCam hinzugefügt
+REM FoxitPDFReader hinzugefügt
+
 GUI r
 DELAY 500
 STRING powershell
@@ -558,52 +564,53 @@ ENTER
 ENTER
 REM Install fvdsuite
 REM Vorbereitung Install fvdsuite
-REM fvdsuite N.I.O.
+REM Installation über Webseite
 STRING Write-Host "Moechten Sie die Software fvdsuite intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { Start-Process "https://www.techspot.com/downloads/5583-fvd-suite.html" }
 ENTER
 ENTER
 REM Install livestreamer
 REM Vorbereitung Install livestreamer
-REM livestreamer N.I.O.
+REM livestreamer über Chocolatey
+REM N.I.O
 STRING Write-Host "Moechten Sie die Software livestreamer intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { choco install livestreamer }
 ENTER
 ENTER
 REM Install TwitchLeecher
 REM Vorbereitung Install TwitchLeecher
-REM TwitchLeecher N.I.O.
+REM Installation über Webseite
 STRING Write-Host "Moechten Sie die Software TwitchLeecher intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { Start-Process "https://github.com/Franiac/TwitchLeecher"  }
 ENTER
 ENTER
 REM Install DroidCam   
 REM Vorbereitung Install DroidCam
-REM DroidCam N.I.O.
+REM DroidCam I.O.
 STRING Write-Host "Moechten Sie die Software DroidCam intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install dev47apps.DroidCam }
 ENTER
 ENTER
 REM Install FoxitPDFReader
 REM Vorbereitung Install FoxitPDFReader
-REM FoxitPDFReader N.I.O.
+REM FoxitPDFReader I.O.
 STRING Write-Host "Moechten Sie die Software FoxitPDFReader intallieren (J/N)"
 ENTER
 STRING $response = Read-Host
 ENTER
-STRING if ($response -eq 'J') { winget install  }
+STRING if ($response -eq 'J') { winget install Foxit.FoxitReader }
 ENTER
 ENTER
 REM Install mix pad
