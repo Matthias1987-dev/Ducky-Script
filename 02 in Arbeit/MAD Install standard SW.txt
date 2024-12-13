@@ -26,6 +26,8 @@ REM vlc-3.0.14-win64
 REM Web_Designer_11_Premium_x64_DLV_de-DE_150529_14-21_11_0_1_38827
 REM xps_to_pdf
 REM PrusaSlicer
+REM 2pdf
+REM gpl Ghostscript
 
 REM Abfrage ob installiert oder deinstalliert werden soll.
 
@@ -125,6 +127,7 @@ REM fvdsuite nicht gefunden, installation über Webseite
 REM TwitchLeecher nicht gefunden, installation über Webseite
 REM DroidCam hinzugefügt
 REM FoxitPDFReader hinzugefügt
+
 
 GUI r
 DELAY 500
