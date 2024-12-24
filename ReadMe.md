@@ -15,6 +15,172 @@ FlipperZero FW von GitHub wird geklont.
 - **Ordner 04 WIFI Key**
 Div. WIFI Keys blank.
 
+## Programme die Installiert werden:
+
+- [ ] Winget
+
+- [ ] Chocolatey
+
+- [ ] TeamViewer
+
+- [ ] VM Workstation
+
+- [ ] Win32 Disk Imager
+
+- [ ] Discord
+
+- [ ] FileZilla
+
+- [ ] SD Formater
+
+- [ ] Cura Ultimaker
+
+- [ ] Repetier-Host
+
+- [ ] WinRar
+
+- [ ] PuTTY
+
+- [ ] Telegram
+
+- [ ] StickyPassword
+
+- [ ] Raspberry Pi Imager
+
+- [ ] Notepad++
+
+- [ ] Visual Studio Code
+
+- [ ] RealVNC Viewer
+
+- [ ] QFinder Pro
+
+- [ ] NextCloud
+
+- [ ] TuxGuitar
+
+- [ ] Audacity
+
+- [ ] BalenaEtcher
+
+- [ ] ProfiCAD
+
+- [ ] Arduino
+
+- [ ] qFlipper
+
+- [ ] FreeCAD
+
+- [ ] SweetHome3D
+
+- [ ] Jamulus
+
+- [ ] HWinfo
+
+- [ ] GIT
+
+- [ ] Python
+
+- [ ] Yubico.Authenticator
+
+- [ ] Office 365
+
+- [ ] Windows SUB System for Linux
+
+- [ ] Rufus
+
+- [ ] ImageResizer
+
+- [ ] FastCopy
+
+- [ ] fvdsuite-2.4.2
+
+- [ ] livestreamer
+
+- [ ] mix pad
+
+- [ ] Steam
+
+- [ ] TeamSpeak
+
+- [ ] vlc
+
+- [ ] Web_Designer
+
+- [ ] PrusaSlicer
+
+- [ ] 2pdf
+
+- [ ] gpl Ghostscript
+
+- [ ] FotoSortierer
+
+- [ ] Yamaha THR Remote
+
+- [ ] Zoom Edith
+
+- [ ] PowerToy
+
+- [ ] AllwaySync
+
+- [ ] FreeFileSync
+
+- [ ] TinyPic
+
+- [ ] cdbxp
+
+- [ ] AntiTwin
+
+- [ ] TwitchLeecher
+
+- [ ] DroidCam
+
+- [ ] FoxitPDFReader
+
+
+
+## Programme die De-Intalliert werden:
+
+- [ ] WhatsApp
+
+- [ ] Spotify
+
+- [ ] LinkedIn
+
+- [ ] Cortana
+
+- [ ] Filme & TV
+
+- [ ] Karten
+
+- [ ] Kontakte
+
+- [ ] Kurznotizen
+
+- [ ] Mail und Kalender
+
+- [ ] Microsoft Clipchamp
+
+- [ ] Microsoft Teams
+
+- [ ] Microsoft To Do
+
+- [ ] Nachrichten
+
+- [ ] Solitaire
+
+- [ ] Wetter
+
+- [ ] Xbox Live
+
+- [ ] Xbox
+
+- [ ] Netflix
+
+- [ ] Disney
+
+
+
 ## Verwendung
 
 1. Klone das Repository:
