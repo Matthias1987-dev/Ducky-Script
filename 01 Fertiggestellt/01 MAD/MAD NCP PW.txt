@@ -1,0 +1,4 @@
+REM PW für NCP Client
+STRING uMeh9etJGvuStpZKir9zk6htzjxPekFD4pHd5rK7PgQ
+REM    uMeh9etJGvuStpZKir9zk6htzjxPekFD4pHd5rK7PgQ
+REM    uMeh9etJGvuStpZKir9zk6htzjxPekFD4pHd5rK7PgQ
