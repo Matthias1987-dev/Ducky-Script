@@ -1,0 +1,32 @@
+REM Author: MAD
+REM Description: This script will delete the known_hosts file in the .ssh directory and then SSH into the RT1 Tablet.
+REM Target: Windows
+REM Dependencies: PowerShell
+REM Version: 1.0
+REM title: MAD SSH RT1 new Fingerprint
+REM TEST I.O.
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING del ./.ssh/
+DELAY 2000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING j
+DELAY 1000
+ENTER
+STRING ssh ubuntu@192.168.178.57
+DELAY 1000
+ENTER
+WAIT_FOR_BUTTON_PRESS
+STRING yes
+WAIT_FOR_BUTTON_PRESS
+ENTER
+WAIT_FOR_BUTTON_PRESS
+DELAY 1000
+STRING ubuntu
+DELAY 1000
+ENTER
